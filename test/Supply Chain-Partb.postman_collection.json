@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "dde09c3c-9381-434d-8dc7-b53ce10d152d",
+		"name": "Supply Chain-Partb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/createPO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nameOfOrg\": \"retailer\",\n    \"buyerCRN\": \"RET002\",\n    \"sellerCRN\": \"DIST001\",\n    \"drugName\": \"Paracetamol\",\n    \"quantity\": \"2\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createPO",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createPO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/createShipment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nameOfOrg\": \"distributor\",\n    \"buyerCRN\": \"RET002\",\n    \"drugName\": \"Paracetamol\",\n    \"listOfAssets\": \"001,002\",\n    \"transporterCRN\": \"TRA002\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createShipment",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createShipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/updateShipment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nameOfOrg\": \"transporter\",\n    \"buyerCRN\": \"RET002\",\n    \"drugName\": \"Paracetamol\",\n    \"transporterCRN\": \"TRA002\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updateShipment",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateShipment"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

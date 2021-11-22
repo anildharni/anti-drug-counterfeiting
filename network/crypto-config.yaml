@@ -1,0 +1,41 @@
+OrdererOrgs:
+  - Name: Orderer
+    Domain: pharma-supply-network.com
+    Specs:
+      - Hostname: orderer
+PeerOrgs:
+ - Name: manufacturer
+   Domain: manufacturer.pharma-supply-network.com
+   EnableNodeOUs: true
+   Template:
+      Count: 2
+   Users:
+      Count: 1
+ - Name: distributor
+   Domain: distributor.pharma-supply-network.com
+   EnableNodeOUs: true
+   Template:
+      Count: 2
+   Users:
+      Count: 1
+ - Name: retailer
+   Domain: retailer.pharma-supply-network.com
+   EnableNodeOUs: true
+   Template:
+      Count: 2
+   Users:
+      Count: 1
+ - Name: consumer
+   Domain: consumer.pharma-supply-network.com
+   EnableNodeOUs: true
+   Template:
+      Count: 2
+   Users:
+      Count: 1
+ - Name: transporter
+   Domain: transporter.pharma-supply-network.com
+   EnableNodeOUs: true
+   Template:
+      Count: 2
+   Users:
+      Count: 1
